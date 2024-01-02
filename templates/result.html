@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Valentines Result</title>
+</head>
+<body>
+    <h1>Secret Valentines Result</h1>
+    <!-- {% if partner %}
+        <p>{{ name }}, your secret valentine partner is: {{ partner.girl }}</p>
+    {% else %}
+        <p>{{ name }}, you don't have a secret valentine partner yet. Please check again later.</p>
+    {% endif %} -->
+    {% if name == partner.guy %}
+        <p>{{ name }}, your secret valentine is: {{ partner.girl }}</p>
+    {% elif name == partner.girl %}
+        <p>{{ name }}, your secret valentine is: {{ partner.guy }}</p>
+    {% else %}
+        <p>Sorry, there seems to be an error. Kindly ensure you have:
+            <ul>
+                <li>Entered ONLY your first name CORRECTLY</li>
+                <li>Have no spaces or commas or special symbols in your input</li>
+                <a href="{{url_for('index')}}">Click here to try again!</a>
+            </ul>
+        </p>
+    {% endif %}
+</body>
+</html>
