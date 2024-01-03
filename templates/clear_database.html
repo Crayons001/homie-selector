@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Database</title>
+</head>
+<body>
+    <h1>Clear Database</h1>
+    <p>Are you sure you want to clear the database?</p>
+    <form method="post" action="{{ url_for('clear_database') }}">
+        <button type="submit">Clear Database</button>
+    </form>
+</body>
+</html>
